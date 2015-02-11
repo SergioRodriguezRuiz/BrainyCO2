@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BrainyCO2</title>
+</head>
+<style type="text/css">
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+		color: #8C8C8C;
+
+}
+
+
+#img {float:left; padding-top:%; width:45%;}
+
+#conetenedor {border:"0";width: 10%;}
+
+#menu{ 
+	width: 100%;
+	height: 150px;
+  background: url(images/img02.jpg);
+  background-repeat:repeat-x;
+
+  }
+
+#col {float:left; width:100%;
+	background: #000000;
+
+	border-bottom: 2px solid #B7D24D;}
+
+#col1 {float:right; width:100%; background: #000000;}
+
+
+#elemento { float:left; width:50%;}
+#unidades{ color:white; font-weight: bold;
+font-size:0.8em;height:50%;width:150px;text-align:;}
+#leyenda {color:white; font-weight: bold;text-align:center}
+#leyenda_menu {color:white; text-align:center}
+
+#resumen { width:100%; clear:both;background:url("imagenes/fondo_menu.png");border-bottom: 7px solid #B7D24D
+}
+
+#pie {clear:both; border-top: 2px solid #B7D24D;
+background:url("fondo_pie.png")}
+
+#cuadros {height:48px;width:110px;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+text-align:center;background:url("imagenes/casilla2.jpg");
+background-repeat : no-repeat;background-position :center;font-size:1.8em;
+}
+
+#boton {width:50%;padding:1%;background-color: red}
+
+
+#gas1 {height:48px;width:110px;font-size:1.8em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#electricidad1 {height:48px;width:110px;
+margin-left: auto;font-size:1.2em;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#butano1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#gasoleo1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#avion1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#bus1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#tren1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#gasolina1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+#diesel1 {height:48px;width:110px;font-size:1.2em;
+margin-left: auto;
+	margin-right: auto;
+border:none; 
+;text-align:center;background:url("imagenes/casilla1.jpg");
+background-repeat : no-repeat;background-position :center;
+;}
+
+
+
+
+
+#total {padding:0%;color:white; font-weight: bold;
+font-size:100%;}
+
+#cuadrores {width:70%;height:70px;text-align:center;
+font:sans-serif;
+font-size:170%;
+border:none; 
+font-weight: bold;
+background:url("imagenes/resumen.jpg");
+background-repeat : no-repeat;background-position :top;}
+
+
+#reset {
+text-align:center; padding:2%; top:2%;}
+
+
+
+input{
+}
+#frases {
+
+      float:right;
+	background-color:;
+      width:60%;	height:50px;	letter-spacing: -0px;
+	font-size: 0.7em;
+	color: #003300;text-align:center;
+
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+var datos = [2.15,0.35,2.938,2.7857,0.12,0.05,0.02788,0.19,0.165];
+
+
+function muestra () {
+	alert('instrucciones de eso');
+	
+}
+
+total = 0;
+
+function calcula_gas () {
+
+	valor_gas = document.getElementById("gas1").value;
+
+	if (isNaN(valor_gas)) {		
+		document.gas.gas2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_gas=valor_gas*2.15;
+		valor_gas=valor_gas.toFixed(2);
+		document.gas.gas2.value=valor_gas;
+
+	}
+}
+
+function calcula_electricidad () {
+
+	valor_electricidad = document.getElementById("electricidad1").value;
+
+	if (isNaN(valor_electricidad)) {
+		document.electricidad.electricidad2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+	}
+	else {
+		valor_electricidad=valor_electricidad*0.35;
+		valor_electricidad=valor_electricidad.toFixed(2);
+		document.electricidad.electricidad2.value=valor_electricidad;
+
+	}
+}
+
+function calcula_butano () {
+
+	var valor_butano = document.getElementById("butano1").value;
+
+	if (isNaN(valor_butano)) {
+		document.butano.butano2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+	}
+	else {
+		valor_butano=valor_butano*2.938;
+		valor_butano=valor_butano.toFixed(2);
+		document.butano.butano2.value=valor_butano;
+
+	}
+}
+
+function calcula_gasoleo () {
+
+	var valor_gasoleo = document.getElementById("gasoleo1").value;
+
+	if (isNaN(valor_gasoleo)) {
+		document.gasoleo.gasoleo2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+	}
+	else {
+		valor_gasoleo=valor_gasoleo*2.7857;
+		valor_gasoleo=valor_gasoleo.toFixed(2);
+		document.gasoleo.gasoleo2.value=valor_gasoleo;
+
+	}
+}
+
+function calcula_avion () {
+
+	var valor_avion = document.getElementById("avion1").value;
+
+	if (isNaN(valor_avion)) {		
+		document.avion.avion2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_avion=valor_avion*0.12;
+		valor_avion=valor_avion.toFixed(2);
+		document.avion.avion2.value=valor_avion;
+
+	}
+}
+
+function calcula_bus () {
+
+	var valor_bus = document.getElementById("bus1").value;
+
+	if (isNaN(valor_bus)) {		
+		document.bus.bus2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_bus=valor_bus*0.05;
+		valor_bus=valor_bus.toFixed(2);
+		document.bus.bus2.value=valor_bus;
+
+	}
+}
+
+function calcula_tren () {
+
+	var valor_tren = document.getElementById("tren1").value;
+
+	if (isNaN(valor_tren)) {		
+		document.tren.tren2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_tren=valor_tren*0.02788;
+		valor_tren=valor_tren.toFixed(2);
+		document.tren.tren2.value=valor_tren;
+
+	}
+}
+
+function calcula_gasolina () {
+
+	var valor_gasolina = document.getElementById("gasolina1").value;
+
+	if (isNaN(valor_gasolina)) {		
+		document.gasolina.gasolina2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_gasolina=valor_gasolina*0.19;
+		valor_gasolina=valor_gasolina.toFixed(2);
+		document.gasolina.gasolina2.value=valor_gasolina;
+
+	}
+}
+
+function calcula_diesel () {
+
+	var valor_diesel = document.getElementById("diesel1").value;
+
+	if (isNaN(valor_diesel)) {		
+		document.diesel.diesel2.value="NaN";
+		document.resumen1.resumen2.value = "NaN";
+
+	}
+	else {
+		valor_diesel=valor_diesel*0.165;
+		valor_diesel=valor_diesel.toFixed(2);
+		document.diesel.diesel2.value=valor_diesel;
+
+	}
+}
+
+function calcula_total () {
+  total = 0;
+
+  total = parseFloat(document.gas.gas2.value) + 
+	  parseFloat(document.electricidad.electricidad2.value) + 
+	  parseFloat(document.butano.butano2.value) + 
+	  parseFloat(document.avion.avion2.value)+
+	  parseFloat(document.gasoleo.gasoleo2.value) + 
+	  parseFloat(document.bus.bus2.value) + 
+	  parseFloat(document.tren.tren2.value) + 
+	  parseFloat(document.gasolina.gasolina2.value) + 
+	  parseFloat(document.diesel.diesel2.value);
+  total = total.toFixed(2);
+  document.resumen1.resumen2.value = (total);
+}
+function aleatorio () {
+frases = new Array();
+frases[0] = "Don't blow it - good planets are hard to find. ~Quoted in Time";
+frases[1] = "Nature provides a free lunch, but only if we control our appetites. ~William Ruckelshaus";
+frases[2] = "Because we don't think about future generations, they will never forget us.  ~Henrik Tikkanen";
+frases[3] = "I'm not an environmentalist.  I'm an Earth warrior.  ~Darryl Cherney";
+frases[4] = "We never know the worth of water till the well is dry.  ~Thomas Fuller";
+frases[5] = "We do not inherit the earth from our ancestors, we borrow it from our children.  ~Native American Proverb";
+frases[6] = "There are no passengers on Spaceship Earth.  We are all crew.  ~Marshall McLuhan";
+frases[7] = "They kill good trees to put out bad newspapers.  ~James G. Watt";
+frases[8] = "The use of solar energy has not been opened up because the oil industry does not own the sun.  ~Ralph Nader";
+frases[9] = "Economic advance is not the same thing as human progress.  ~John Clapham";
+frases[10] = "Suburbia is where the developer bulldozes out the trees, then names the streets after them.  ~Bill Vaughn";
+frases[11] = "For 200 years we've been conquering Nature.  Now we're beating it to death.  ~Tom McMillan";
+frases[12] = "If civilization has risen from the Stone Age, it can rise again from the Wastepaper Age.  ~Jacques Barzun";
+frases[13] = "Till now man has been up against Nature; from now on he will be up against his own nature.  ~Dennis Gabor";
+frases[14] = "A virgin forest is where the hand of man has never set foot.  ~Author Unknown"
+frases[15] = "When we heal the earth, we heal ourselves.  ~David Orr"
+frases[16] = "We cannot command Nature except by obeying her.  ~Francis Bacon"
+frases[17] = "All in favor of conserving gasoline, please raise your right foot.  ~Author Unknown"
+frases[18] = "Take care of the earth and she will take care of you.  ~Author Unknown";
+frases[19] = "We could have saved the Earth but we were too damned cheap.  ~Kurt Vonnegut, Jr.";
+frases[20] = "Waste not the smallest thing created, for grains of sand make mountains, and atomies infinity.  ~E. Knight";
+frases[21] = "Opie, you haven't finished your milk.  We can't put it back in the cow, you know.  ~Aunt Bee Taylor";
+frases[22] = "Civilization... wrecks the planet from seafloor to stratosphere.  ~Richard Bach";
+frases[23] = "It is horrifying that we have to fight our own government to save the environment.  ~Ansel Adams";
+frases[24] = "When one tugs at a single thing in nature, he finds it attached to the rest of the world.  ~John Muir";
+frases[25] = "The mother of the year should be a sterilized woman with two adopted children.  ~Paul R. Ehrlich";
+frases[25] = "Man is a blind, witless, low brow, anthropocentric clod who inflicts lesions upon the earth.  ~Ian McHarg";
+frases[25] = "The control man has secured over nature has far outrun his control over himself.  ~Ernest Jones";
+frases[25] = "Every day is Earth Day.  ~Author Unknown";
+frases[25] = "Remember when atmospheric contaminants were romantically called stardust?  ~Lane Olinghouse";
+frases[25] = "The universe is not required to be in perfect harmony with human ambition.  ~Carl Sagan";
+aleatorio = Math.random() * (frases.length);
+aleatorio = Math.floor(aleatorio);
+document.getElementById("frases").innerHTML=frases[aleatorio];
+}
+
+
+</script>
+
+
+<body onload="aleatorio()">
+	<div id=menu>
+		<img id="imsg" alt="gas" src="imagenes/titulocalculadora.jpg" style="padding-right:2px; float:right; height:;width:">
+<a href="index.html" title="start" id="start">		<img id="imsg" alt="gas" src="imagenes/logo.jpg" style="padding-top:2px; float:left; height:90px;"></a>
+		<p id="frases"></p>
+	</div>
+
+	<div id="col">  <!--GAS-->
+	<p id="leyenda">Enter Natural Gas consumption shown on your invoice (m³)</p>
+	<div id="col1">
+
+		<img id="img" alt="gas" src="imagenes/gas.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="gas" name="gas">
+		<p id="unidades"><input maxlength="" id="gas1" name="gas1" onchange="calcula_gas(); calcula_total()" onclick="" type="number"/> <b>m³</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="gas2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+	<div id="col">  <!--ELECTRICIDAD-->
+	<p id="leyenda">Enter the power consumption of your bill (in kWh)</p>
+	<div id="col1">
+
+		<img id="img" alt="electricidad" src="imagenes/electricidad.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="electricidad" name="electricidad">
+		<p id="unidades"><input maxlength="" id="electricidad1" name="electricidad1" onchange="calcula_electricidad() ; calcula_total()" onclick="" type="number"/> <b>kWh</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="electricidad2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+	<div id="col">  <!--BUTANO-->
+	<p id="leyenda">Enter the consumption of butane / propane your bill (in Kg)</p>
+	<div id="col1">
+
+		<img id="img" alt="butano" src="imagenes/butano.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="butano" name="butano">
+		<p id="unidades"><input maxlength="" id="butano1" name="butano1" onchange="calcula_butano(); calcula_total()" onclick="" type="number"/> <b>Kg</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="butano2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>
+	<div id="col">  <!--GASOLEO-->
+	<p id="leyenda">Enter your boiler consumption in liters</p>
+	<div id="col1">
+
+		<img id="img" alt="gasoleo" src="imagenes/gasoleo.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="gasoleo" name="gasoleo">
+		<p id="unidades"><input maxlength="" id="gasoleo1" name="gasoleo1" onchange="calcula_gasoleo(); calcula_total()" onclick="" type="number"/> <b>L</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="gasoleo2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+	<div id="col">  <!--AVION-->
+	<p id="leyenda">Enter the miles you do in plane</p>
+	<div id="col1">
+
+		<img id="img" alt="avion" src="imagenes/avion.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="avion" name="avion">
+		<p id="unidades"><input maxlength="" id="avion1" name="avion1" onchange="calcula_avion(); calcula_total()" onclick="" type="number"/> <b>Km</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" name="avion2" value="0" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+	<div id="col">  <!--BUS-->
+	<p id="leyenda">Enter the miles you do in bus</p>
+	<div id="col1">
+
+		<img id="img" alt="bus" src="imagenes/bus.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="bus" name="bus">
+		<p id="unidades"><input maxlength="" id="bus1" name="bus1" onchange="calcula_bus(); calcula_total()" onclick="" type="number"/> <b>Km</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="bus2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+	<div id="col">  <!--TREN-->
+	<p id="leyenda">Enter the miles you do in train</p>
+	<div id="col1">
+
+		<img id="img" alt="tren" src="imagenes/tren.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="tren" name="tren">
+		<p id="unidades"><input maxlength="" id="tren1" name="tren1" onchange="calcula_tren(); calcula_total()" onclick="" type="number"/> <b>Km</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="tren2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>
+	<div id="col">  <!--GASOLINA-->
+	<p id="leyenda">Enter the miles you do in automobile gasoline</p>
+	<div id="col1">
+
+		<img id="img" alt="gasolina" src="imagenes/gasolina.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="gasolina" name="gasolina">
+		<p id="unidades"><input maxlength="" id="gasolina1" name="gasolina1" onchange="calcula_gasolina(); calcula_total()" onclick="" type="number"/> <b>Km</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="gasolina2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>
+	<div id="col">  <!--DIESEL-->
+	<p id="leyenda">Enter the miles you do in diesel car</p>
+	<div id="col1">
+
+		<img id="img" alt="diesel" src="imagenes/diesel.jpg">
+		
+		<div id="elemento">
+		<form  style="font-size:70%;" id="diesel" name="diesel">
+		<p id="unidades"><input maxlength="" id="diesel1" name="diesel1" onchange="calcula_diesel(); calcula_total()" onclick="" type="number"/> <b>Km</b> </p>
+		<p id="unidades"><input ReadOnly id="cuadros" value="0" name="diesel2" onclick="" type="text"/> <b>Kg CO<sub>2</sub></b> </p>
+
+		</form>
+		</div>	
+	</div>
+
+
+	</div>	
+		
+	
+	<div id="resumen">
+	<form id="resumen1" name="resumen1">
+	<p id="total"><input ReadOnly id="cuadrores" name="resumen2" onclick="" type="text"/><b>Kg CO<sub>2</sub></b> </p>
+	</form>
+	<center>
+
+	<a href="start.html" title="Poner a cero el contador" id="reset"><img src ="imagenes/reset.jpg"></a>
+<a href="http://www.facebook.com/sharer.php?u=https://www.facebook.com/BrainyCO2" target="_blank" title="Share" id="reset"><img src ="imagenes/boton_facebook.jpg"></a>
+	<a href="http://www.carbonfootprint.com/carbonoffset.html" title="Offset your carbon footprint" id="reset"><img src ="imagenes/boton_compensa.jpg"></a>
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BrainyCO2</title>
+</head>
+
+
+<script language="JavaScript">
+
+<!--
+
+var numQues = 1;
+var numChoi = 3;
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+		    	  currSelection.checked=false;
+        if (currSelection.value == matriz[aleatorio][4]) {
+          score++;
+	  		contador = parseInt(contador);
+	  contador = contador + 1;
+	  muestra(1,contador);
+	  currSelection.checked=false;
+
+          break;
+        }
+	else
+	  	  muestra(2,contador);
+
+      }
+    }
+  }
+}
+
+// -->
+
+
+function muestra (a,b) {
+  
+var variable;
+var objDiv = document.getElementById("menu");
+var imagen = document.createElement("img");
+var imagen_menu = document.getElementById("img_menu");
+imagen.src = "images/img04.gif";
+imagen.height = 25;
+
+contador = parseInt(contador);
+     if (a==1 && b!=duracion) //ACIERTOOOO
+    {
+
+	imagen_menu.src="imagenes/pie_acierto.jpg";
+	  objDiv.appendChild(imagen);
+	  setTimeout("aleatoriof()",1000);
+
+    }
+    else //ERROR
+      {	if (b==duracion) //FIN DEL JUEGOOOOOOOOOO 
+	    {
+	      objDiv.appendChild(imagen);
+	    imagen_menu.src="imagenes/pie_acierto.jpg";	
+	  setTimeout("fin()",1000);
+
+	      contador = 0;
+	    iter=0;
+	    x=0;
+
+	    }
+
+
+	if (a!=1) {
+	imagen_menu.src="imagenes/pie_error.jpg";
+		  setTimeout("rebote()",500);
+	  }
+
+	}
+
+}
+
+function rebote () {
+  var imagen_menu = document.getElementById("img_menu");
+imagen_menu.src="imagenes/pie_test.jpg";
+}
+
+function fin () {
+	      window.location="testfin.html";
+}
+
+
+	
+
+
+// -->
+var preguntas = 20;
+var opciones = 3;
+var matriz=new Array(preguntas);
+var contador = 0;
+var duracion = 10; //EN PREGUNTASSSSSSS
+var x =0;
+var iter=new Array(10);
+
+
+for (i = 0; i < (preguntas); i++){
+matriz[i]=new Array(opciones+1);
+}
+
+matriz[0][0] = "How much of the world's water is available for human use?"; //PREGUNTA
+matriz[0][1] = "97%"; //OPCION1
+matriz[0][2] = "23%"; //OPCION2
+matriz[0][3] = "Less than 1%"; //OPCION3
+matriz[0][4] = "Less than 1%"; //RESPUESTA CORRECTA
+matriz[0][4] = "Less than 1%"; //EXPLICACION
+
+matriz[1][0] = "Who  proposed the green house effect in 1824?";
+matriz[1][1] = "Svante Arrhenius ";
+matriz[1][2] = "Joseph Fourier ";
+matriz[1][3] = "Henrik Svensmark";
+matriz[1][4] = "Joseph Fourier ";
+
+matriz[2][0] = "Which one of these human activities contributes the most to global warming"; //PREGUNTA
+matriz[2][1] = "Riding scooters"; //OPCION1
+matriz[2][2] = "cutting down trees"; //OPCION2
+matriz[2][3] = "Using fossil fuels for energy"; //OPCION3
+matriz[2][4] = "Using fossil fuels for energy"; //RESPUESTA CORRECTA
+
+matriz[3][0] = "Which temperature rise does the Intergovernmental Panel on Climate Change (IPCC) predict for this century?"; //PREGUNTA
+matriz[3][1] = "0.5-3.2 degrees celsius"; //OPCION1
+matriz[3][2] = "1.5-5.8 degrees celsius"; //OPCION2
+matriz[3][3] = "2.2-6.4 degrees celsius"; //OPCION3
+matriz[3][4] = "1.5-5.8 degrees celsius"; //RESPUESTA CORRECTA
+
+matriz[4][0] = "A TV can run __ hour(s) from the energy saved by recycing a single aluminum can."; //PREGUNTA
+matriz[4][1] = "10"; //OPCION1
+matriz[4][2] = "3"; //OPCION2
+matriz[4][3] = "5"; //OPCION3
+matriz[4][4] = "3"; //RESPUESTA CORRECTA
+
+matriz[5][0] = "Which of these lightbulb types use the least amount of energy?"; //PREGUNTA
+matriz[5][1] = "Incandescent "; //OPCION1
+matriz[5][2] = "Halogen "; //OPCION2
+matriz[5][3] = "Compact Flourescent"; //OPCION3
+matriz[5][4] = "Compact Flourescent"; //RESPUESTA CORRECTA
+
+matriz[6][0] = "Each person creates about ___ pounds of waste every day."; //PREGUNTA
+matriz[6][1] = "10,000"; //OPCION1
+matriz[6][2] = "5,000"; //OPCION2
+matriz[6][3] = "800"; //OPCION3
+matriz[6][4] = "10,000"; //RESPUESTA CORRECTA
+
+matriz[7][0] = "The average office worker uses ____ sheets of paper per year."; //PREGUNTA
+matriz[7][1] = "4.7"; //OPCION1
+matriz[7][2] = "3.2 "; //OPCION2
+matriz[7][3] = "7.3"; //OPCION3
+matriz[7][4] = "4.7"; //RESPUESTA CORRECTA
+
+matriz[8][0] = "Recycling one ton of paper saves?"; //PREGUNTA
+matriz[8][1] = "10 trees"; //OPCION1
+matriz[8][2] = "3 trees"; //OPCION2
+matriz[8][3] = "17 trees"; //OPCION3
+matriz[8][4] = "17 trees"; //RESPUESTA CORRECTA
+
+matriz[9][0] = "The Earth would be too cold to support life today without ___."; //PREGUNTA
+matriz[9][1] = "Ozone"; //OPCION1
+matriz[9][2] = "The green house effect"; //OPCION2
+matriz[9][3] = "Global Warming"; //OPCION3
+matriz[9][4] = "The green house effect"; //RESPUESTA CORRECTA
+
+matriz[10][0] = "What day is observed as World Earth Day?"; //PREGUNTA
+matriz[10][1] = "April 22"; //OPCION1
+matriz[10][2] = "April 24"; //OPCION2
+matriz[10][3] = "May 30"; //OPCION3
+matriz[10][4] = "April 22"; //RESPUESTA CORRECTA
+
+matriz[11][0] = "How long does it take carbon dioxide to disperse in the atmosphere?"; //PREGUNTA
+matriz[11][1] = "6 months"; //OPCION1
+matriz[11][2] = "100 years"; //OPCION2
+matriz[11][3] = "50 years "; //OPCION3
+matriz[11][4] = "100 years"; //RESPUESTA CORRECTA
+
+matriz[12][0] = "How long does it take a Styrofoam cup to decompose?"; //PREGUNTA
+matriz[12][1] = "400 years"; //OPCION1
+matriz[12][2] = "Never"; //OPCION2
+matriz[12][3] = "100 years"; //OPCION3
+matriz[12][4] = "400 years"; //RESPUESTA CORRECTA
+
+matriz[12][0] = "What gas, or gases, contribute(s) to global warming?"; //PREGUNTA
+matriz[12][1] = "methane and water vapor"; //OPCION1
+matriz[12][2] = "carbon dioxide and nitrous oxide"; //OPCION2
+matriz[12][3] = "all of the above"; //OPCION3
+matriz[12][4] = "all of the above"; //RESPUESTA CORRECTA
+
+matriz[13][0] = "What is an ecological footprint?"; //PREGUNTA
+matriz[13][1] = "The area occupied by an Ecco shoe"; //OPCION1
+matriz[13][2] = "The area for food, space, fibers and waste for one human being"; //OPCION2
+matriz[13][3] = "An EU-measurement"; //OPCION3
+matriz[13][4] = "The area for food, space, fibers and waste for one human being"; //RESPUESTA CORRECTA
+
+matriz[14][0] = "Which was the first country to incorporate an environmental protection goal in its constitution?"; //PREGUNTA
+matriz[14][1] = "Czechoslovakia"; //OPCION1
+matriz[14][2] = "Spain"; //OPCION2
+matriz[14][3] = "Romania"; //OPCION3
+matriz[14][4] = "Czechoslovakia"; //RESPUESTA CORRECTA
+
+matriz[15][0] = "Sustainable development means that:"; //PREGUNTA
+matriz[15][1] = "Societies last longer."; //OPCION1
+matriz[15][2] = "Allows for long-term use of natural resources."; //OPCION2
+matriz[15][3] = "The perpetual growth of companies."; //OPCION3
+matriz[15][4] = "Allows for long-term use of natural resources."; //RESPUESTA CORRECTA
+
+matriz[16][0] = "Which material accounts for the greatest percentage of the weight of solid waste?"; //PREGUNTA
+matriz[16][1] = "food waste"; //OPCION1
+matriz[16][2] = "paper"; //OPCION2
+matriz[16][3] = "yard waste"; //OPCION3
+matriz[16][4] = "paper"; //RESPUESTA CORRECTA
+
+matriz[17][0] = "The CERES Principles are"; //PREGUNTA
+matriz[17][1] = "designed to eliminate the production of greenhouse gases."; //OPCION1
+matriz[17][2] = "a set of voluntary environmental standards for businesses."; //OPCION2
+matriz[17][3] = "anti-pollution codes that were adopted at the first Earth Summit in 1992."; //OPCION3
+matriz[17][4] = "a set of voluntary environmental standards for businesses."; //RESPUESTA CORRECTA
+
+matriz[18][0] = "Which of these natural events affect the climate?"; //PREGUNTA
+matriz[18][1] = "Thawing permafrost"; //OPCION1
+matriz[18][2] = "Volcanic eruptions"; //OPCION2
+matriz[18][3] = "All of the above"; //OPCION3
+matriz[18][4] = "All of the above"; //RESPUESTA CORRECTA
+
+matriz[19][0] = "Which of the following changes in climate has NOT already occurred? "; //PREGUNTA
+matriz[19][1] = "0.74°C increase in average global temperature over the last century "; //OPCION1
+matriz[19][2] = "A decrease in the sea ice around Antarctica"; //OPCION2
+matriz[19][3] = "Fewer cold days and frosts, and more frequent heatwaves over the last 50 years"; //OPCION3
+matriz[19][4] = "A decrease in the sea ice around Antarctica"; //RESPUESTA CORRECTA
+
+function aleatoriof () {
+
+// si vienes de atras para no poder jugar!!!!
+
+
+if(contador==duracion)
+{
+ window.location="testprin.html";
+}
+
+
+var imagen_menu = document.getElementById("img_menu");
+	imagen_menu.src="imagenes/pie_test.jpg";
+
+if (contador != 0 && contador != duracion)
+{                                    
+do{
+aleatorio = Math.random() * (matriz.length);
+aleatorio = Math.floor(aleatorio);
+
+}
+while (aleatorio == iter[0] || aleatorio == iter[1] ||aleatorio == iter[2] || aleatorio == iter[3] || aleatorio == iter[4] ||aleatorio == iter[5]
+|| aleatorio == iter[6] || aleatorio == iter[7] ||aleatorio == iter[8] || aleatorio == iter[9]);
+
+}
+else { //primeraa vez
+    if(contador != duracion) {
+  aleatorio = Math.random() * (matriz.length);
+  aleatorio = Math.floor(aleatorio);
+
+  }
+
+
+  
+}
+iter[x]=aleatorio;
+x=x+1;
+
+document.getElementById("frases").innerHTML=matriz[aleatorio][0];
+document.getElementById("res1").innerHTML=matriz[aleatorio][1];document.getElementById("respuesta1").value=matriz[aleatorio][1];
+document.getElementById("res2").innerHTML=matriz[aleatorio][2];document.getElementById("respuesta2").value=matriz[aleatorio][2];
+document.getElementById("res3").innerHTML=matriz[aleatorio][3];document.getElementById("respuesta3").value=matriz[aleatorio][3];
+
+}
+</script>
+ 
+  
+<style type="text/css">
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	background: #000000;
+		color: #8C8C8C;
+
+}
+
+#menu{ 
+      background:url("imagenes/pie_test.jpg");
+	width: 100%;
+	height: 95px;
+  background-repeat:repeat-x;background-repeat:repeat-x;
+  }
+
+#col{
+   width:100%;
+	height: 350px;
+  background:url("imagenes/fondo_menu.png");  background-repeat:repeat;
+  border-bottom: 5px solid #B7D24D;border-top: 5px solid #B7D24D
+
+}
+ 
+#pie{
+  height:50px;
+  width:100%;
+background-repeat:no-repeat;
+  }
+
+#pregunta{
+
+border-bottom: 1px solid ;
+
+background-color: ;
+
+    height:;
+  width:100%;
+text-align:center;
+
+}
+#img_menu{
+ border-bottom: 5px solid #B7D24D;  width:100%;
+}
+#frases {
+
+      width:100%;	letter-spacing: -0px;
+	font-size: 1.3em;
+	color: #ffffff;width:100%;	height:100%;
+}
+#respuesta1{
+
+margin-top:20px;
+
+}
+
+#respuesta2{
+
+
+
+}
+
+#respuesta3{
+
+
+
+}
+</style>
+
+
+
+</head>
+
+<body onload="aleatoriof()">
+<center>
+<div id="menu">
+
+
+<img id="img_menu" src ="imagenes/pie_test.jpg" style="height: 60px;">
+
+
+</div>
+
+<div id="col">
+
+
+<form name="quiz">
+
+
+<div id="pregunta">
+  <p id="frases"></p>
+</div>
+
+<center>
+
+<input id="respuesta1" type="radio" name="q1" value="fgddf" onClick="getScore(this.form);"><p id="res1"><p><br>
+<input id="respuesta2" type="radio" name="q1" value="abbbbbbbb" onClick="getScore(this.form)"><p id="res2"><p><br>
+<input id="respuesta3" type="radio" name="q1" value="fgdf" onClick="getScore(this.form)"><p id="res3"><p><br>
+</form>
+
+
+	
+
+</div>
+
+
+
+</body></html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BrainyC02</title>
+</head>
+<style type="text/css">
+
+#botonmenu{
+    background:url("");
+border:0px;
+	letter-spacing: 0px;
+    color: #B7D24D;
+	padding-left: 13px;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	color: #F8FBEC;
+}
+body, th, td, input, textarea, select, option {
+
+	font-family: "Trebuchet MS", "Times New Roman", Arial, Times, serif;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	color: #F8FBEC;
+}
+
+h1 {
+	letter-spacing: -2px;
+	font-size: 2em;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+p, ul, ol {
+	
+}
+
+blockquote {
+	padding-left: 1em;
+}
+
+blockquote p, blockquote ul, blockquote ol {
+	line-height: normal;
+	font-style: italic;
+}
+
+a {
+	color: #9BDB18;
+}
+a:hover {
+	text-decoration: none;
+	color: #E6B715;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	background: #000000;
+		color: #8C8C8C;
+}
+
+#menu{ 
+	width: 100%;
+	height: 150px;
+  background: url(images/img02.jpg);
+  background-repeat:repeat-x;
+  }
+
+#col{
+
+  width:100%;
+  background:url("imagenes/fondo_col.jpg");
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 470px;
+	margin: 0;
+}
+
+.post {
+line-height: 200%;
+	padding: 0 0 1px 0;
+}
+
+.title {
+	margin: 2%;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #B7D24D;
+}
+.entry {
+  	margin: 2%;
+
+}
+
+.byline {
+	margin: 0;
+	color: #646464;
+}
+
+.meta {
+	text-align: left;
+	color: #646464;
+	padding: 10px 10px;
+	height: 48px;
+	background: url(images/img06.gif) no-repeat left top;
+}
+
+.meta .more {
+	padding-left: 20px;
+}
+
+.meta .comments {
+	padding-left: 20px;
+}
+
+.meta a {
+	color: #003300;
+}
+ 
+
+
+
+#footer {
+	height: 100px;
+	background-color:#;
+	margin:20px;
+
+
+}
+
+#frases {
+
+      float:right;
+	background-color:;
+      width:60%;	height:50px;	letter-spacing: -0px;
+	font-size: 0.85em;
+	color: #003300;text-align:center;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+function cambiaElemento1 () {
+  document.getElementById("titulo").innerHTML="What is BrainyCO</strong><sub>2</sub> ?";
+  document.getElementById("contenido").innerHTML="<strong> BrainyCO<sub>2</sub> </strong> it is a tool that allows each person or small business know their CO2 emissions. Also lets you discover how to neutralize the carbon footprint is, how to compensate these emissions from everyday activity concerned. Therefore, it is a tool that facilitates the Voluntary Emission Reduction, helping to protect the environment every day. Enjoy :)";
+}
+function cambiaElemento2 () {
+  document.getElementById("titulo").innerHTML="What is the purpose of BrainyCO<sub>2</sub> ?";
+  document.getElementById("contenido").innerHTML="<strong> BrainyCO<sub>2</sub> </strong> was developed for the contest 'Generation1992' as a way to help reduce global warming and thus its harmful impact on the environment. By becoming aware of the amount of CO2 emitted each and access ways to offset the pollution, facilitating the implementation of measures to neutralize the CO2 emissions worldwide. A friendly and easy to program as it allows access massively reducing greenhouse gases, reducing the effects of environmental pollution";
+}
+function cambiaElemento3 () {
+  document.getElementById("titulo").innerHTML="How does BrainyCO<sub>2</sub> ?";
+  document.getElementById("contenido").innerHTML="It works through a computer program, which is constantly updated to keep up to date monitoring data. This can be present at any time it is needed, facilitating the calculation of emissions in real time. So, like a common calculator, the program can then add up the emissions from various activities to deliver an average of kgs of CO2 emissions per person. With this result is accessed online compensation options. It also has a small set of questions where users test their knowledge of the environment and a section of tips that are useful to protect the environment.";
+}
+function cambiaElemento4 () {
+  document.getElementById("titulo").innerHTML="How did BrainyCO<sub>2</sub> ?";
+  document.getElementById("contenido").innerHTML="<strong> BrainyCO<sub>2</sub> </strong> was developed with the intention of helping present and future generations to ecological awareness in a fun and interactive. In recent years there has been a large global awareness on the protection and care of nature as well as a technological breakthrough capable of spreading the principles of sustainable development.";
+}
+function cambiaElemento5 () {
+
+  
+
+  document.getElementById("titulo").innerHTML="Where can you find me ?";
+  document.getElementById("contenido").innerHTML= 
+'<center><!-- Facebook Badge START --><a href="https://www.facebook.com/sergiostupidisco" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Sergio Rodr&#xed;guez Ruiz">Sergio Rodr&#xed;guez Ruiz</a><br/><a href="https://www.facebook.com/sergiostupidisco" target="_TOP" title="Sergio Rodr&#xed;guez Ruiz"><img src="https://badge.facebook.com/badge/100001264090171.158.2028842231.png" style="border: 0px;" /></a><!-- Facebook Badge END -->' 
+}
+
+function aleatorio () {
+frases = new Array();
+frases[0] = "Don't blow it - good planets are hard to find. ~Quoted in Time";
+frases[1] = "Nature provides a free lunch, but only if we control our appetites. ~William Ruckelshaus";
+frases[2] = "Because we don't think about future generations, they will never forget us.  ~Henrik Tikkanen";
+frases[3] = "I'm not an environmentalist.  I'm an Earth warrior.  ~Darryl Cherney";
+frases[4] = "We never know the worth of water till the well is dry.  ~Thomas Fuller";
+frases[5] = "We do not inherit the earth from our ancestors, we borrow it from our children.  ~Native American Proverb";
+frases[6] = "There are no passengers on Spaceship Earth.  We are all crew.  ~Marshall McLuhan";
+frases[7] = "They kill good trees to put out bad newspapers.  ~James G. Watt";
+frases[8] = "The use of solar energy has not been opened up because the oil industry does not own the sun.  ~Ralph Nader";
+frases[9] = "Economic advance is not the same thing as human progress.  ~John Clapham";
+frases[10] = "Suburbia is where the developer bulldozes out the trees, then names the streets after them.  ~Bill Vaughn";
+frases[11] = "For 200 years we've been conquering Nature.  Now we're beating it to death.  ~Tom McMillan";
+frases[12] = "If civilization has risen from the Stone Age, it can rise again from the Wastepaper Age.  ~Jacques Barzun";
+frases[13] = "Till now man has been up against Nature; from now on he will be up against his own nature.  ~Dennis Gabor";
+frases[14] = "A virgin forest is where the hand of man has never set foot.  ~Author Unknown"
+frases[15] = "When we heal the earth, we heal ourselves.  ~David Orr"
+frases[16] = "We cannot command Nature except by obeying her.  ~Francis Bacon"
+frases[17] = "All in favor of conserving gasoline, please raise your right foot.  ~Author Unknown"
+frases[18] = "Take care of the earth and she will take care of you.  ~Author Unknown";
+frases[19] = "We could have saved the Earth but we were too damned cheap.  ~Kurt Vonnegut, Jr.";
+frases[20] = "Waste not the smallest thing created, for grains of sand make mountains, and atomies infinity.  ~E. Knight";
+frases[21] = "Opie, you haven't finished your milk.  We can't put it back in the cow, you know.  ~Aunt Bee Taylor";
+frases[22] = "Civilization... wrecks the planet from seafloor to stratosphere.  ~Richard Bach";
+frases[23] = "It is horrifying that we have to fight our own government to save the environment.  ~Ansel Adams";
+frases[24] = "When one tugs at a single thing in nature, he finds it attached to the rest of the world.  ~John Muir";
+frases[25] = "The mother of the year should be a sterilized woman with two adopted children.  ~Paul R. Ehrlich";
+frases[25] = "Man is a blind, witless, low brow, anthropocentric clod who inflicts lesions upon the earth.  ~Ian McHarg";
+frases[25] = "The control man has secured over nature has far outrun his control over himself.  ~Ernest Jones";
+frases[25] = "Every day is Earth Day.  ~Author Unknown";
+frases[25] = "Remember when atmospheric contaminants were romantically called stardust?  ~Lane Olinghouse";
+frases[25] = "The universe is not required to be in perfect harmony with human ambition.  ~Carl Sagan";
+aleatorio = Math.random() * (frases.length);
+aleatorio = Math.floor(aleatorio);
+document.getElementById("frases").innerHTML=frases[aleatorio];
+}
+
+
+</script>
+
+
+</head>
+
+
+<body onload="aleatorio()">
+
+
+<div id="menu">		
+
+<img id="imsg" alt="gas" src="imagenes/tituloabout.jpg" style="padding-right:2px; float:right; height:px;">
+<a href="index.html" title="start" id="start">		<img id="imsg" alt="gas" src="imagenes/logo.jpg" style="padding-top:2px; float:left; height:90px;"></a>
+		<p id="frases"></p>
+<a href="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBrainyCO2" title="start" id="start"><img id="img1" src ="imagenes/like_menu.jpg" style=" float:right; ;  width:;"></a>
+
+</div>
+
+<div id="footer">
+
+<p id="enlace"><img id="img" alt="diesel" src="images/img04.gif" style="height: 20px"><input id="botonmenu" type="button" value="What is it?" onClick="cambiaElemento1()">
+		<img id="img" alt="diesel" src="images/img04.gif" style="height: 20px;"><input id="botonmenu" type="button" value="What is the goal?" onClick="cambiaElemento2()">
+<p id="enlace">		<img id="img" alt="diesel" src="images/img04.gif" style="height: 20px;"><input id="botonmenu" type="button" value="How does it work?" onClick="cambiaElemento3()">
+		<img id="img" alt="diesel" src="images/img04.gif" style="height: 20px;"><input id="botonmenu" type="button" value="How did?" onClick="cambiaElemento4()">
+<p id="enlace">		<img id="img" alt="diesel" src="images/img04.gif" style="height: 20px;"><input id="botonmenu" type="button" value="Contact" onClick="cambiaElemento5()">
+
+</p>
+
+</div>
+
+			
+<div class="post"><br>
+<h1 id="titulo" class="title">What is BrainyCO</strong><sub>2</sub> ?</h1>
+			<div class="entry">
+				<p id="contenido"><strong>BrainyCO</strong><sub>2</sub> it is a tool that allows each person or small business know their CO2 emissions.
+     Also lets you discover how to neutralize the carbon footprint is, how to compensate these emissions from everyday activity concerned.
+     Therefore, it is a tool that facilitates the Voluntary Emission Reduction, helping to protect the environment every day. Enjoy :)</p>
+			</div>
+</div>
+
+
+
+
+
+</body>
+</html>
